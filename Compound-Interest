@@ -1,0 +1,22 @@
+// जहाँ P मूलधन है, n समय है और r ब्याज दर है।
+
+import java.util.Scanner;
+
+public class compoundinterest {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Program to find Compound Interest ");
+        System.out.println("\nEnter the Principal :");
+        int p = input.nextInt();
+        System.out.print("principal :"+ p);
+        System.out.println("\nEnter the Simple Interest : ");
+        float r = input.nextFloat();
+        System.out.print("interest :"+ r);
+        System.out.println("\nEnter the Time : ");
+        float time = input.nextFloat();
+        System.out.println("time :"+ time);
+        System.out.println("Compound Interest is :");
+        float  result = ((p * r * time)/100);
+        System.out.println(result);
+    }
+}
