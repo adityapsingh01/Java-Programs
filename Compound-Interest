@@ -1,4 +1,4 @@
-// जहाँ P मूलधन है, n समय है और r ब्याज दर है।
+// जहाँ P मूलधन है, t समय है और r ब्याज दर है।
 
 import java.util.Scanner;
 
@@ -13,10 +13,10 @@ public class compoundinterest {
         float r = input.nextFloat();
         System.out.print("interest :"+ r);
         System.out.println("\nEnter the Time : ");
-        float time = input.nextFloat();
-        System.out.println("time :"+ time);
+        float t = input.nextFloat();
+        System.out.println("time :"+ t);
         System.out.println("Compound Interest is :");
-        float  result = ((p * r * time)/100);
+        double  result = p* Math.pow((1+r/100),t);
         System.out.println(result);
     }
 }
