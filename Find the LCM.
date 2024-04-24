@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Least_Common_Multiple {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Program for find the LCM :\n");
+        System.out.print("Enter the first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter the second number: ");
+        int b = sc.nextInt();
+        int LCM = LCM(a, b);
+        System.out.println("The LCM of " + a + " and " + b + " is " + LCM);
+        System.out.println("Thanks for using our program.");
+
+    }
+    public static  int LCM(int a, int b) {
+        int i = 1;
+        while (i <= b) {
+            int factor = a*i;
+            if (factor % b == 0) {
+                return factor;
+            }
+            i++;
+        }
+
+        return 0; //unreachable
+
+
+    }
+}
