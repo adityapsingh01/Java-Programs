@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Greatest_Common_divisor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the first number: ");
+        int num1 = sc.nextInt();
+        System.out.println("Enter the second number: ");
+        int num2 = sc.nextInt();
+        int gcd = gcd(num1,num2);
+        System.out.println("The greatest common divisor is: "+gcd);
+        System.out.println("Thanks !");
+
+
+    }
+    public static int gcd(int a, int b ) {
+        int gcd = 1;
+        int i = 2;
+        int least = least(a,b);
+        while (i<=least){
+            if(a%i==0 && b%i==0){
+                gcd =i;
+            }
+            i++;
+        }
+
+        return gcd;
+
+
+    }
+
+    public static int least(int num1 , int num2){
+        if (num1<num2){
+            return num1;
+        }
+        else {
+            return num2;
+        }
+    }
+}
